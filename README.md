@@ -5,7 +5,7 @@
 
 Clone Repositório
 ```sh
-git clone https://github.com/codeedu/micro-admin-videos-php.git laravel9
+https://github.com/asafebymarques/microservice-admin-video-laravel.git
 ```
 
 ```sh
