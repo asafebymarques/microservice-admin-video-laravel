@@ -3,33 +3,10 @@
 
 ## Rodar o Laravel
 
-Clone Repositório
-```sh
-https://github.com/asafebymarques/microservice-admin-video-laravel.git
-```
-
-```sh
-cd laravel9/
-```
-
-
-Alterne de branch
-```sh
-git checkout laravel-9-quick-start
-```
-
-
-Remova o versionamento
-```sh
-rm -rf .git/
-```
-
-
 Crie o Arquivo .env
 ```sh
 cp .env.example .env
 ```
-
 
 Atualize as variáveis de ambiente do arquivo .env
 ```dosini
