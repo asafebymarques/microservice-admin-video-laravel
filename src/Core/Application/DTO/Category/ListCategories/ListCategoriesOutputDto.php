@@ -5,7 +5,7 @@ namespace Core\Application\DTO\Category\ListCategories;
 class ListCategoriesOutputDto
 {
     public function __construct(
-        public array $items, 
+        public array $items,
         public int $total,
         public int $last_page,
         public int $first_page,
