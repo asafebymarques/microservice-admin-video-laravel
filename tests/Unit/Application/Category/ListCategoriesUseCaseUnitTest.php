@@ -22,7 +22,7 @@ class ListCategoriesUseCaseUnitTest extends TestCase
         $this->mockerRepository->shouldReceive('paginate')->andReturn($this->mockerPagination);
 
         $this->mockerInputDto = Mockery::mock(ListCategoriesInputDto::class, ['filter', 'desc']);
-        
+
         $useCase = new ListCategoriesUseCase($this->mockerRepository);
         $responseUseCase = $useCase->execute($this->mockerInputDto);
 
@@ -58,7 +58,7 @@ class ListCategoriesUseCaseUnitTest extends TestCase
         $this->mockerRepository->shouldReceive('paginate')->andReturn($this->mockerPagination);
 
         $this->mockerInputDto = Mockery::mock(ListCategoriesInputDto::class, ['filter', 'desc']);
-        
+
         $useCase = new ListCategoriesUseCase($this->mockerRepository);
         $responseUseCase = $useCase->execute($this->mockerInputDto);
 
@@ -72,6 +72,7 @@ class ListCategoriesUseCaseUnitTest extends TestCase
         $this->mockerPagination = Mockery::mock(stdClass::class, PaginationInterface::class);
         $this->mockerPagination->shouldReceive('items')->andReturn($items);
         $this->mockerPagination->shouldReceive('total')->andReturn(0);
+        $this->mockerPagination->shouldReceive('currentPage')->andReturn(0);
         $this->mockerPagination->shouldReceive('firstPage')->andReturn(0);
         $this->mockerPagination->shouldReceive('lastPage')->andReturn(0);
         $this->mockerPagination->shouldReceive('perPage')->andReturn(0);

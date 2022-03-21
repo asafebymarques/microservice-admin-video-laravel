@@ -39,6 +39,7 @@ class CategoryController extends Controller
                                                 ->additional([
                                                     'meta' => [
                                                         'total' => $response->total,
+                                                        'current_page' => $response->current_page,
                                                         'last_page' => $response->last_page,
                                                         'first_page' => $response->first_page,
                                                         'per_page' => $response->per_page,
@@ -58,7 +59,7 @@ class CategoryController extends Controller
             )
         );
 
-        return (new CategoryResource(collect($response)))
+        return (new CategoryResource($response))
                     ->response()
                     ->setStatusCode(Response::HTTP_CREATED);
     }
@@ -67,7 +68,7 @@ class CategoryController extends Controller
     {
         $category = $listCategoryUseCase->execute(new CategoryInputDto($id));
 
-        return (new CategoryResource(collect($category)))
+        return (new CategoryResource($category))
                         ->response()
                         ->setStatusCode(Response::HTTP_OK);
     }
@@ -81,7 +82,7 @@ class CategoryController extends Controller
             )
         );
 
-        return (new CategoryResource(collect($response)))
+        return (new CategoryResource($response))
                         ->response()
                         ->setStatusCode(Response::HTTP_OK);
     }
