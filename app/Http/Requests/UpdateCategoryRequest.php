@@ -28,7 +28,16 @@ class UpdateCategoryRequest extends FormRequest
                 'required',
                 'min:3',
                 'max:255',
-            ]
+            ],
+            'description' => [
+                'nullable',
+                'min:3',
+                'max:255',
+            ],
+            'is_active' => [
+                'nullable',
+                'boolean',
+            ],
         ];
     }
 }
