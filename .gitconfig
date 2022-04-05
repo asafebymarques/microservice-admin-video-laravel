@@ -2,4 +2,4 @@
 	email = asafebymarques@icloud.com
 	name = Asafe Marques
 [credential]
-	helper = "!f() { /var/www/.vscode-server/bin/c722ca6c7eed3d7987c0d5c3df5c45f6b15e77d1/node /tmp/vscode-remote-containers-03f36dac1a0fbdae3862e4ea138ba372b21559fb.js $*; }; f"
+	helper = "!f() { /var/www/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47cafb0b5/node /tmp/vscode-remote-containers-72a69de2f9327a6e0060190a3297c2037ba6e413.js $*; }; f"
