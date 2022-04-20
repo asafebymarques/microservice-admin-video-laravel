@@ -1,0 +1,2 @@
+\App\Models\CastMember::factory()->count(100)->create();
+exit
